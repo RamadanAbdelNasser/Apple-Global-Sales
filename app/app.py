@@ -13,7 +13,7 @@ st.set_page_config(
 # -------------------
 # Sidebar
 # -------------------
-st.sidebar.image("app/images/apple_logo.png", width=150)
+st.sidebar.image("images/apple_logo_black.svg", width=150)
 st.sidebar.title("Navigation")
 st.sidebar.markdown("---")
 st.sidebar.write("اختر الصفحة اللي تحب تشوفها:")
