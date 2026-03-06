@@ -1,0 +1,8 @@
+numpy
+pandas
+plotly.express
+streamlit
+wordcloud
+matplotlib
+nbformat
+altair==4.*
