@@ -13,7 +13,7 @@ col2.title("Apple Sales Dashboard")
 
 
 
-df = pd.read_csv('data/clean_Data/apple_global_sales_cleaned_data.csv')
+df = pd.read_csv('data/clean_data/apple_global_sales_cleaned_data.csv')
 
 # Filter SideBar
 
