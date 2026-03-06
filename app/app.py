@@ -21,7 +21,7 @@ st.markdown('General analysis of global sales, with key performance indicators.'
 # -------------------
 with st.expander("📌 Notes"):
     st.write("""
-        🍎 Apple Global Sales Analysis
+        Apple Global Sales Analysis
 
         This project analyzes Apple’s global sales dataset to generate meaningful insights and visualizations using Python and Streamlit. It provides a dashboard overview of key metrics, trends, and product performance.
 
