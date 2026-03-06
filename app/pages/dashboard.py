@@ -37,6 +37,7 @@ color_filter = st.sidebar.multiselect( 'Colors',
                                   default= df['color'].unique(),
                                   )
 
+
 discount_pct_filter = st.sidebar.slider( 'discount_pct',
                                   min_value= df['discount_pct'].min(),
                                   max_value= df['discount_pct'].max()
