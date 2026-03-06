@@ -7,3 +7,10 @@ wordcloud
 matplotlib
 nbformat
 altair==4.*
+streamlit==1.55.0
+pandas==2.3.3
+plotly==5.22.0
+numpy==2.4.2
+pillow==12.1.1
+python-dateutil==2.9.0.post0
+...
