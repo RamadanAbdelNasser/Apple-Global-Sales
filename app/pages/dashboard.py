@@ -14,6 +14,7 @@ col2.title("Apple Sales Dashboard")
 
 
 df = pd.read_csv('data/clean_data/apple_global_sales_cleaned_data.csv')
+df['sale_date'] = df['sale_date'].astype('date32[pyarrow]')
 
 # Filter SideBar
 
@@ -43,9 +44,17 @@ discount_pct_filter = st.sidebar.slider( 'discount_pct',
                                   max_value= df['discount_pct'].max()
                                   )
 
+first_date_filter = st.sidebar.date_input('First Date',
+                                  value= df['sale_date'].min(),
+                                  min_value= df['sale_date'].min(),
+                                  max_value= df['sale_date'].max())
+last_date_filter = st.sidebar.date_input('Last Date',
+                                  value= df['sale_date'].max(),
+                                  min_value= df['sale_date'].min(),
+                                  max_value= df['sale_date'].max())
 
 
-filtered_df =df.query(' (payment_method == @payment_method_filter) and (return_status == @return_status_filter) and (sales_channel == @sales_channel_filter) and (color == @color_filter) and (discount_pct >= @discount_pct_filter) ' )
+filtered_df =df.query(' (payment_method == @payment_method_filter) and (return_status == @return_status_filter) and (sales_channel == @sales_channel_filter) and (color == @color_filter) and (discount_pct >= @discount_pct_filter) and (@last_date_filter >= sale_date >= @first_date_filter) ' )
 
 
 Total_Sales = len(filtered_df['sale_id'])
